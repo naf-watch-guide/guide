@@ -4,6 +4,8 @@ IMG_SUFFIX = "/hqdefault.jpg"
 
 iamwatching = ""
 
+previous_position = { username: "4CVIT", chapter: 0 }
+
 links = [
     { username: "4CVIT", links: ["FgHOiVT7buc", "-IZ025_0Upg", "zu5lWDsJfQk"], progress: 0 },
     { username: "Ashswag", links: [], progress: 0 },
@@ -24,7 +26,7 @@ links = [
     { username: "Squiddo", links: [], progress: 0 },
     { username: "Taneesha­hogan", links: ["y3u4L-GHC1I", "HR8yEmy-E8o", "iSI9t0VJVE0", "mZIN-j18LCc"], progress: 0 },
     { username: "Wunba", links: [], progress: 0 },
-    { username: "Yeah Jaron", links: ["0xC5cfaVz9U", "1n3wMfVaBh8", "N-fZ6pj_Jdg", "TFkDzU9qClI"], progress: 0 }
+    { username: "YeahJaron", links: ["0xC5cfaVz9U", "1n3wMfVaBh8", "N-fZ6pj_Jdg", "TFkDzU9qClI"], progress: 0 }
 ]
 
 function resetProgress() {
@@ -36,13 +38,23 @@ function resetProgress() {
     regen()
 }
 
-function hover(linkobj) {
-    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${linkobj.progress === linkobj.ending ? linkobj.ending : "?"}`)
-    if (linkobj.progress === linkobj.ending) {
+function hover(linkobj, chapter) {
+    const end = linkobj.progress === linkobj.ending
+
+    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end ? linkobj.ending : "?"}`)
+    if (end) {
         $("#progress").addClass("ending")
     } else {
         $("#progress").removeClass("ending")
     }
+
+    if (previous_position.username !== linkobj.username) {
+        const sound = new Audio(`assets/sound/${end ? "stone" : "gravel"}${Math.ceil(Math.random()*4)}.ogg`)
+        sound.volume = 0.04
+        sound.play()
+    }
+
+    previous_position = { username: linkobj.username, chapter: chapter }
 }
 
 function linkClicked(linkobj) {
@@ -123,7 +135,7 @@ function regen() {
                 }
 
                 $(`#video-${linkobj.username}-${chapter}`).on("mouseenter", (event) => {
-                    hover(linkobj)
+                    hover(linkobj, chapter)
                 })
 
                 if (linkobj.ending === linkobj.progress && invisible || ending && !invisible) {
