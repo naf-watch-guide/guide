@@ -4,12 +4,12 @@
 }
 
 body {
-    background-image: url(assets/dort.png);
+    background-image: url(assets/img/dart.png);
 }
 
 .thumbnail {
-    width: 120pt;
-    height: 67pt;
+    width: 160px;
+    height: 90px;
     object-fit: cover;
     object-position: center;
 }
@@ -62,23 +62,25 @@ span {
 }
 
 table {
-    border-spacing: 24pt 4pt;
+    border-spacing: 32px 0;
 }
 
 td {
-    width: 120pt;
-    height: 80pt;
+    width: 160px;
+    height: 128px; /* 80pt originally.*/
     text-align: center;
-    padding-right: 8pt;
-    padding-left: 8pt;
-    background-image: url(assets/dart.png);
+    padding-right: 16px; /*8pt*/
+    padding-left: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url(assets/img/small_dort.png);
     font-family: 'Minecraftia', monospace;
     color: white;
     text-shadow: 1pt 1pt black;
 }
 
 td.ending {
-    background-image: url(assets/stonebricj.png);
+    background-image: url(assets/img/small_ston.png);
 }
 
 button {
@@ -86,4 +88,12 @@ button {
     color: white;
     text-shadow: 1pt 1pt black;
     background-color: darkgray;
+}
+
+#options {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    left: 35%;
+    top: 40%;
 }
