@@ -36,6 +36,15 @@ function resetProgress() {
     regen()
 }
 
+function hover(linkobj) {
+    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${linkobj.progress === linkobj.ending ? linkobj.ending : "?"}`)
+    if (linkobj.progress === linkobj.ending) {
+        $("#progress").addClass("ending")
+    } else {
+        $("#progress").removeClass("ending")
+    }
+}
+
 function linkClicked(linkobj) {
     $("#overlay").addClass("overlay-visible")
     iamwatching = linkobj
@@ -112,6 +121,10 @@ function regen() {
                         linkClicked(linkobj)
                     })
                 }
+
+                $(`#video-${linkobj.username}-${chapter}`).on("mouseenter", (event) => {
+                    hover(linkobj)
+                })
 
                 if (linkobj.ending === linkobj.progress && invisible || ending && !invisible) {
                     $(`#video-${linkobj.username}-${chapter}`).addClass("ending")
