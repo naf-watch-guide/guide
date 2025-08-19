@@ -14,8 +14,21 @@ body {
     object-position: center;
 }
 
-.locked {
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
+#logo {
+    align-self: center;
+    width: min-content;
+}
+
+#subtitle {
+    align-self: center;
 }
 
 #overlay {
@@ -36,6 +49,16 @@ body {
 .overlay-button {
     position: relative;
     left: 50%;
+}
+
+span {
+    font-family: 'Minecraftia', monospace;
+    color: white;
+    text-shadow: 1pt 1pt black;
+}
+
+#main {
+    margin-left: 270pt;
 }
 
 table {
