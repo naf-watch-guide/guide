@@ -21,7 +21,7 @@ links_s1 = [
     { username: "NotNotBrock", links: ["vj4N5sYIymk","RzPvQtWIGBY","le_rgfEPXn8","F04FkpfKwRk","omJhG4WIgp4","MM6W7ERdN_g","DJKyyuuwFXU","8j8vqg8GuxU"], progress: 0 },
     { username: "rekrap2", links: ["Yuvk4rfhjog", "82LRpQMxpYw", "S_EgYvz-XII", "KavglOabvRA", "uAv7vcPN1ic", "xazZDW8rq5Q", "jPVEgjoQgA4", "u8xC_C-o4DI"], progress: 0 },
     { username: "SB737", links: ["1hDrQ2ip5YY","tZ8sjgDpzD8","2Kc7Nyxg9BU","BbU8-ZqMwNs"], progress: 0, ending: 4 },
-    { username: "Wunba", links: [/*"VVTrr1Vx8LQ"*/], progress: 0 },
+    { username: "Wunba", links: ["VVTrr1Vx8LQ"], progress: 0, ending: 1 },
     { username: "YeahJaron", links: ["95w1C6ebhzQ","SoYs67D278M","aFLgmNRp5zQ","Pqf7-5nMq60"], progress: 0, ending: 4 }
 ]
 
@@ -119,6 +119,8 @@ function swap() {
         if (linkobj.links.length !== 0) {
             if (linkobj.username === "rekrap2") {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story<br><b>(RECOMMENDED)</td>`)
+            } else if (linkparams.season === 1 && linkobj.username === "Wunba") {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><i>(COMPILATION)</td>`)
             } else {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
             }
