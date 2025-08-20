@@ -60,7 +60,7 @@ function resetProgress() {
 function hover(linkobj, chapter) {
     const end = linkobj.progress >= linkobj.ending || linkobj.progress >= 8
 
-    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end || (linkobj.username === "Wunba" && linkparams.season === 1) ? linkobj.ending ?? 8 : "?"}`)
+    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end || linkobj.progress >= 7 || (linkobj.username === "Wunba" && linkparams.season === 1) ? linkobj.ending ?? 8 : "?"}`)
 
     $("#progress").removeClass("beginning")
     $("#progress").removeClass("ending")
