@@ -50,7 +50,7 @@ function hover(linkobj, chapter) {
 
     if (previous_position.username !== linkobj.username) {
         const sound = new Audio(`assets/sound/${end ? "stone" : "gravel"}${Math.ceil(Math.random()*4)}.ogg`)
-        sound.volume = 0.04
+        sound.volume = end ? 0.06 : 0.04
         sound.play()
     }
 
@@ -93,6 +93,10 @@ function main() {
             $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
         }
     });
+
+    links.forEach(linkobj => {
+        linkobj.random = Array.from({length: 8}, () => Math.ceil(Math.random() * 4));
+    })
 
     regen()
 }
@@ -138,9 +142,14 @@ function regen() {
                     hover(linkobj, chapter)
                 })
 
-                if (linkobj.ending === linkobj.progress && invisible || ending && !invisible) {
-                    $(`#video-${linkobj.username}-${chapter}`).addClass("ending")
-                }
+                /*if (linkobj.ending === linkobj.progress && invisible || ending && !invisible) {
+                    if (chapter >= linkobj.ending) {
+                        $(`#video-${linkobj.username}-${chapter}`).addClass("past-ending")
+                    } else {
+                        $(`#video-${linkobj.username}-${chapter}`).addClass("ending")
+                    }
+                }*/
+                $(`#video-${linkobj.username}-${chapter}`).addClass(`variant-${linkobj.random[chapter]}`)
             })
         }
     })

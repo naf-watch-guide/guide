@@ -83,6 +83,97 @@ td.ending {
     background-image: url(assets/img/small_ston.png);
 }
 
+#chapter-2 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-3 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-4 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-5 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-6 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-7 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+#chapter-8 td.past-ending {
+    background-image: url(assets/img/bedrock.png);
+}
+
+
+
+
+#names td {
+    background-image: url(assets/img/grassy_top.png);
+}
+
+#chapter-4 td {
+    background-image: url(assets/img/small_ston.png);
+}
+
+#chapter-4 td.variant-4 {
+    background-image: url(assets/img/4_variant_4.png);
+}
+
+#chapter-5 td {
+    background-image: url(assets/img/ston.png);
+}
+
+#chapter-6 td {
+    background-image: url(assets/img/ston.png);
+}
+
+#chapter-7 td {
+    background-image: url(assets/img/ston.png);
+}
+
+#chapter-8 td {
+    background-image: url(assets/img/ston.png);
+}
+
+#chapter-2 td.variant-1 {
+    background-image: url(assets/img/2_variant_1.png);
+}
+
+#chapter-2 td.variant-2 {
+    background-image: url(assets/img/2_variant_2.png);
+}
+
+#chapter-2 td.variant-3 {
+    background-image: url(assets/img/2_variant_3.png);
+}
+
+#chapter-2 td.variant-4 {
+    background-image: url(assets/img/2_variant_4.png);
+}
+
+#chapter-3 td.variant-1 {
+    background-image: url(assets/img/3_variant_1.png);
+}
+
+#chapter-3 td.variant-2 {
+    background-image: url(assets/img/3_variant_2.png);
+}
+
+#chapter-3 td.variant-3 {
+    background-image: url(assets/img/3_variant_3.png);
+}
+
+#chapter-3 td.variant-4 {
+    background-image: url(assets/img/3_variant_4.png);
+}
+
 button {
     font-family: 'Minecraftia', monospace;
     color: white;
