@@ -22,7 +22,7 @@ links_s1 = [
     { username: "rekrap2", links: ["Yuvk4rfhjog", "82LRpQMxpYw", "S_EgYvz-XII", "KavglOabvRA", "uAv7vcPN1ic", "xazZDW8rq5Q", "jPVEgjoQgA4", "u8xC_C-o4DI"], progress: 0 },
     { username: "SB737", links: ["1hDrQ2ip5YY","tZ8sjgDpzD8","2Kc7Nyxg9BU","BbU8-ZqMwNs"], progress: 0, ending: 4 },
     { username: "Wunba", links: [/*"VVTrr1Vx8LQ"*/], progress: 0 },
-    { username: "YeahJaron", links: ["95w1C6ebhzQ","SoYs67D278M","aFLgmNRp5zQ","Pqf7-5nMq60"], progress: 0 }
+    { username: "YeahJaron", links: ["95w1C6ebhzQ","SoYs67D278M","aFLgmNRp5zQ","Pqf7-5nMq60"], progress: 0, ending: 4 }
 ]
 
 links_s2 = [
@@ -58,9 +58,9 @@ function resetProgress() {
 }
 
 function hover(linkobj, chapter) {
-    const end = linkobj.progress === linkobj.ending
+    const end = linkobj.progress >= linkobj.ending || linkobj.progress >= 8
 
-    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end ? linkobj.ending : "?"}`)
+    $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end ? linkobj.ending ?? 8 : "?"}`)
 
     $("#progress").removeClass("beginning")
     $("#progress").removeClass("ending")
