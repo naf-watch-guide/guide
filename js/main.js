@@ -59,13 +59,14 @@ function hover(linkobj, chapter) {
 
     if (previous_position.username !== linkobj.username) {
         let sound = "grass"
-        let volume = 0.03
+        let volume = 0.04
 
         if (end) {
             sound = "stone"
             volume = 0.12
         } else if (linkobj.progress === 1) {
             sound = "gravel"
+            volume = 0.03
         } else if (linkobj.progress > 1) {
             sound = "stone-step"
             volume = 0.12
