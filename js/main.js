@@ -17,7 +17,7 @@ links_s1 = [
     { username: "ClownPierce", links: ["l1M8__oMJXA","niCSUJNS6gg"], progress: 0, ending: 2 },
     { username: "Loony", links: ["DWvlfm779Nc","qP_bHX1pwEU","H1YGxl_jPj4","4AZBA775tSk","lTLKfRt_I1c","NL0zSPZ-P6I","LXHbYSPz1Xw","7lAXiEA6NvE"], progress: 0 },
     { username: "MiniMuka", links: ["7tJzGjkCpJA","mZ7_9jrJx-Y","ZiqUsunxUOE"], progress: 0, ending: 3 },
-    { username: "MogSwamp", links: [], progress: 0, ending: 1 },
+    { username: "MogSwamp", links: ["oKODGpJDNss"], progress: 0, ending: 1 },
     { username: "NotNotBrock", links: ["vj4N5sYIymk","RzPvQtWIGBY","le_rgfEPXn8","F04FkpfKwRk","omJhG4WIgp4","MM6W7ERdN_g","DJKyyuuwFXU","8j8vqg8GuxU"], progress: 0 },
     { username: "rekrap2", links: ["Yuvk4rfhjog", "82LRpQMxpYw", "S_EgYvz-XII", "KavglOabvRA", "uAv7vcPN1ic", "xazZDW8rq5Q", "jPVEgjoQgA4", "u8xC_C-o4DI"], progress: 0 },
     { username: "SB737", links: ["1hDrQ2ip5YY","tZ8sjgDpzD8","2Kc7Nyxg9BU","BbU8-ZqMwNs"], progress: 0, ending: 4 },
