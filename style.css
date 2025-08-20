@@ -63,6 +63,10 @@ span {
     margin-left: 270pt;
 }
 
+#swapper {
+    cursor: pointer;
+}
+
 table {
     border-spacing: 32px 0;
 }

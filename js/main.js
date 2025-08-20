@@ -6,7 +6,26 @@ iamwatching = ""
 
 previous_position = { username: "4CVIT", chapter: 0 }
 
-links = [
+linkparams = {
+    season: 1,
+    get links() {
+        return linkparams.season === 1 ? links_s1 : links_s2
+    }
+}
+
+links_s1 = [
+    { username: "ClownPierce", links: ["l1M8__oMJXA","niCSUJNS6gg"], progress: 0, ending: 2 },
+    { username: "Loony", links: ["DWvlfm779Nc","qP_bHX1pwEU","H1YGxl_jPj4","4AZBA775tSk","lTLKfRt_I1c","NL0zSPZ-P6I","LXHbYSPz1Xw","7lAXiEA6NvE"], progress: 0 },
+    { username: "MiniMuka", links: ["7tJzGjkCpJA","mZ7_9jrJx-Y","ZiqUsunxUOE"], progress: 0, ending: 3 },
+    { username: "MogSwamp", links: [], progress: 0, ending: 1 },
+    { username: "NotNotBrock", links: ["vj4N5sYIymk","RzPvQtWIGBY","le_rgfEPXn8","F04FkpfKwRk","omJhG4WIgp4","MM6W7ERdN_g","DJKyyuuwFXU","8j8vqg8GuxU"], progress: 0 },
+    { username: "rekrap2", links: ["Yuvk4rfhjog", "82LRpQMxpYw", "S_EgYvz-XII", "KavglOabvRA", "uAv7vcPN1ic", "xazZDW8rq5Q", "jPVEgjoQgA4", "u8xC_C-o4DI"], progress: 0 },
+    { username: "SB737", links: ["1hDrQ2ip5YY","tZ8sjgDpzD8","2Kc7Nyxg9BU","BbU8-ZqMwNs"], progress: 0, ending: 4 },
+    { username: "Wunba", links: [/*"VVTrr1Vx8LQ"*/], progress: 0 },
+    { username: "YeahJaron", links: ["95w1C6ebhzQ","SoYs67D278M","aFLgmNRp5zQ","Pqf7-5nMq60"], progress: 0 }
+]
+
+links_s2 = [
     { username: "4CVIT", links: ["FgHOiVT7buc", "-IZ025_0Upg", "zu5lWDsJfQk"], progress: 0 },
     { username: "Ashswag", links: [], progress: 0 },
     { username: "Blooh", links: ["ALEeqAsOW4c", "cA0a7X2BW_M", "dyS3uSkDq1s"], progress: 0 },
@@ -30,8 +49,8 @@ links = [
 ]
 
 function resetProgress() {
-    links.forEach(element => {
-        localStorage.setItem(element.username, 0);
+    linkparams.links.forEach(element => {
+        localStorage.setItem(element.username + linkparams.season, 0);
         element.progress = 0
     });
 
@@ -89,18 +108,45 @@ function linkClicked(linkobj) {
     sound.play()
 }
 
+function swap() {
+    save()
+    $("#swapper").html(`Swap to <b>Season ${linkparams.season}</b>?`)
+    linkparams.season = linkparams.season === 1 ? 2 : 1
+    $("#subtitle").html(`The Season ${linkparams.season} Watch Guide`)
+    load()
+    $("#names").empty()
+    linkparams.links.forEach(linkobj => {
+        if (linkobj.links.length !== 0) {
+            if (linkobj.username === "rekrap2") {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><b>(RECOMMENDED)</td>`)
+            } else {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
+            }
+            
+        }
+    });
+    linkparams.links.forEach(linkobj => {
+        linkobj.random = Array.from({length: 8}, () => Math.ceil(Math.random() * 4));
+    })
+    regen()
+}
+
 function save() {
-    links.forEach(element => {
-        localStorage.setItem(element.username, element.progress);
+    linkparams.links.forEach(element => {
+        localStorage.setItem(element.username + linkparams.season, element.progress);
+    });
+}
+
+function load() {
+    linkparams.links.forEach(element => {
+        element.progress = localStorage.getItem(element.username + linkparams.season) ?? 0;
+        element.progress = Number(element.progress)
     });
 }
 
 function main() {
     // load
-    links.forEach(element => {
-        element.progress = localStorage.getItem(element.username) ?? 0;
-        element.progress = Number(element.progress)
-    });
+    load()
 
     // set callbacks
     $("#overlay-yes").on("click", () => {
@@ -114,14 +160,22 @@ function main() {
         $("#overlay").removeClass("overlay-visible")
     })
 
-    const table = $("#video-table")
-    links.forEach(linkobj => {
+    $("#swapper").on("click", () => {
+        swap()
+    })
+
+    linkparams.links.forEach(linkobj => {
         if (linkobj.links.length !== 0) {
-            $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
+            if (linkobj.username === "rekrap2") {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><b>(RECOMMENDED)</td>`)
+            } else {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
+            }
+            
         }
     });
 
-    links.forEach(linkobj => {
+    linkparams.links.forEach(linkobj => {
         linkobj.random = Array.from({length: 8}, () => Math.ceil(Math.random() * 4));
     })
 
@@ -133,7 +187,7 @@ function regen() {
         $(`#chapter-${chapter}`).empty()
     })
 
-    links.forEach(linkobj => {
+    linkparams.links.forEach(linkobj => {
         if (linkobj.links.length !== 0) {
             Array.from({ length: 8 }, (_, i) => i + 1).forEach(chapter => {
                 const videoID = linkobj.links[chapter - 1]
