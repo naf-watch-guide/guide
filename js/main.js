@@ -44,13 +44,29 @@ function hover(linkobj, chapter) {
     $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end ? linkobj.ending : "?"}`)
     if (end) {
         $("#progress").addClass("ending")
+        $("#progress").removeClass("beginning")
     } else {
         $("#progress").removeClass("ending")
+        if (linkobj.progress == 0) {
+            $("#progress").addClass("beginning")
+        } else {
+            $("#progress").removeClass("beginning")
+        }
     }
 
     if (previous_position.username !== linkobj.username) {
-        const sound = new Audio(`assets/sound/${end ? "stone" : "gravel"}${Math.ceil(Math.random()*4)}.ogg`)
-        sound.volume = end ? 0.06 : 0.04
+        let sound = "grass"
+        let volume = 0.04
+
+        if (end) {
+            sound = "stone"
+            volume = 0.08
+        } else if (linkobj.progress !== 0) {
+            sound = "gravel"
+        }
+
+        sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*4)}.ogg`)
+        sound.volume = volume
         sound.play()
     }
 
@@ -60,6 +76,10 @@ function hover(linkobj, chapter) {
 function linkClicked(linkobj) {
     $("#overlay").addClass("overlay-visible")
     iamwatching = linkobj
+
+    const sound = new Audio(`assets/sound/${end ? "stone" : "gravel"}${Math.ceil(Math.random()*4)}.ogg`)
+    sound.volume = end ? 0.08 : 0.04
+    sound.play()
 }
 
 function save() {
@@ -132,7 +152,7 @@ function regen() {
                 }
 
                 $(`#chapter-${chapter}`).append(`<td id="video-${linkobj.username}-${chapter}" class="video${locked ? "" : " locked"}">${fullLink}</td>`)
-                if (Number(linkobj.progress) + 1 === chapter && linkobj.ending + 1 !== chapter && !locked) {
+                if (Number(linkobj.progress) + 1 === chapter && linkobj.ending + 1 !== chapter && !locked && videoID) {
                     $(`#video-${linkobj.username}-${chapter}`).on("click", (event) => {
                         linkClicked(linkobj)
                     })

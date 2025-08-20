@@ -83,36 +83,9 @@ td.ending {
     background-image: url(assets/img/small_ston.png);
 }
 
-#chapter-2 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
+#progress.beginning {
+    background-image: url(assets/img/grassy_top.png);
 }
-
-#chapter-3 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-#chapter-4 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-#chapter-5 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-#chapter-6 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-#chapter-7 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-#chapter-8 td.past-ending {
-    background-image: url(assets/img/bedrock.png);
-}
-
-
-
 
 #names td {
     background-image: url(assets/img/grassy_top.png);
