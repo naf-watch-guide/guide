@@ -48,7 +48,9 @@ body {
 
 .overlay-button {
     position: relative;
-    left: 50%;
+    left: 35%;
+    padding: 8pt;
+    font-size: large;
 }
 
 span {
