@@ -42,27 +42,33 @@ function hover(linkobj, chapter) {
     const end = linkobj.progress === linkobj.ending
 
     $("#progress").html(`${linkobj.username}'s Story<br>Progress: ${linkobj.progress}/${end ? linkobj.ending : "?"}`)
+
+    $("#progress").removeClass("beginning")
+    $("#progress").removeClass("ending")
+    $("#progress").removeClass("c2")
+
     if (end) {
         $("#progress").addClass("ending")
-        $("#progress").removeClass("beginning")
     } else {
-        $("#progress").removeClass("ending")
         if (linkobj.progress == 0) {
             $("#progress").addClass("beginning")
-        } else {
-            $("#progress").removeClass("beginning")
+        } else if (linkobj.progress > 1) {
+            $("#progress").addClass("c2")
         }
     }
 
     if (previous_position.username !== linkobj.username) {
         let sound = "grass"
-        let volume = 0.04
+        let volume = 0.03
 
         if (end) {
             sound = "stone"
-            volume = 0.08
-        } else if (linkobj.progress !== 0) {
+            volume = 0.12
+        } else if (linkobj.progress === 1) {
             sound = "gravel"
+        } else if (linkobj.progress > 1) {
+            sound = "stone-step"
+            volume = 0.12
         }
 
         sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*4)}.ogg`)
@@ -77,7 +83,7 @@ function linkClicked(linkobj) {
     $("#overlay").addClass("overlay-visible")
     iamwatching = linkobj
 
-    const sound = new Audio(`assets/sound/${end ? "stone" : "gravel"}${Math.ceil(Math.random()*4)}.ogg`)
+    const sound = new Audio(`assets/sound/grass${Math.ceil(Math.random()*4)}.ogg`)
     sound.volume = end ? 0.08 : 0.04
     sound.play()
 }

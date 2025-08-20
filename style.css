@@ -87,6 +87,10 @@ td.ending {
     background-image: url(assets/img/grassy_top.png);
 }
 
+#progress.c2 {
+    background-image: url(assets/img/ston.png);
+}
+
 #names td {
     background-image: url(assets/img/grassy_top.png);
 }
