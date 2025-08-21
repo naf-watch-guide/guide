@@ -48,8 +48,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     top: 0;
+    left: 0;
 }
 
 #overlay.overlay-visible {
@@ -158,14 +159,15 @@ td.ending {
 }
 
 button {
-    background-color: darkgray;
     box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
     font-family: 'Minecraftia', monospace;
     font-size: 12pt;
     color: #DDD;
     text-shadow: 2px 2px #000A;
     padding-top: .3em;
+    padding-bottom: 0;
     background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    width: 360px;
 }
 
 #options {
