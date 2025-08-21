@@ -102,6 +102,10 @@ td.ending {
     background-image: url(assets/img/small_ston.png);
 }
 
+#progress.c4 {
+    background-image: url(assets/img/purpur.png);
+}
+
 #names td {
     background-image: url(assets/img/grassy_top.png);
 }

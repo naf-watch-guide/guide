@@ -66,6 +66,7 @@ function hover(linkobj, chapter) {
     $("#progress").removeClass("ending")
     $("#progress").removeClass("c2")
     $("#progress").removeClass("c3")
+    $("#progress").removeClass("c4")
 
     if (end) {
         $("#progress").addClass("ending")
@@ -74,7 +75,9 @@ function hover(linkobj, chapter) {
             $("#progress").addClass("beginning")
         } else if (linkobj.progress === 2) {
             $("#progress").addClass("c2")
-        } else if (linkobj.progress > 2) {
+        } else if (linkobj.progress === 4) {
+            $("#progress").addClass("c4")
+        } else if (linkobj.progress === 3 || linkobj.progress > 4) {
             $("#progress").addClass("c3")
         }
     }
