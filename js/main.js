@@ -36,14 +36,14 @@ links_s2 = [
     { username: "LegunDOS", links: ["t8p8lF53XdQ", "9XYIXtj-bIE", "qtxIZQ8Vkb4", "5oxrKVymbXk"], progress: 0 },
     { username: "Loony", links: ["ssYpONYsJFY", "WVe-AmEl9B8", "olroMCN2SVw", "GAvQ3fX5e6E"], progress: 0, ending: 4 },
     { username: "Midmysticx", links: ["1obpz9NNnns", "W-YFuoLFQbM", "Sjt3GYksO5c", "PN7kt06QYxE"], progress: 0 },
-    { username: "MiniMuka", links: ["YTF11t91rUg", "f4gsPUsJh1o", "6FEL7OUc2eQ", "H36cQTCJI5M"], progress: 0 },
+    { username: "MiniMuka", links: ["YTF11t91rUg", "f4gsPUsJh1o", "6FEL7OUc2eQ", "H36cQTCJI5M"], progress: 0, ending: 4 },
     { username: "MogSwamp", links: ["wbyreM1_BrQ"], progress: 0, ending: 1 },
     { username: "NotNotBrock", links: ["e3rVlLC-E5k", "dlckliqo7Fw", "skip", "HyZ7S4GO2Bw"], progress: 0, ending: 4 },
     { username: "Reddoons", links: ["rXhX1Wa_M20"], progress: 0, ending: 1 },
     { username: "rekrap2", links: ["hloX5S1YNNc", "hYWieU5YFkg", "BEJG5Dq5fRU", "vFQBd60xjPo"], progress: 0 },
     { username: "SB737", links: ["FhTp7501lgQ", "tnKtNUH5ULg"], progress: 0, ending: 2 },
     { username: "Squiddo", links: ["4kI7jMrNyIo", "zWta9XIUMXs"], progress: 0, ending: 2 },
-    { username: "Taneesha­hogan", links: ["y3u4L-GHC1I", "HR8yEmy-E8o", "iSI9t0VJVE0", "mZIN-j18LCc"], progress: 0 },
+    { username: "Taneesha­hogan", links: ["y3u4L-GHC1I", "HR8yEmy-E8o", "iSI9t0VJVE0", "mZIN-j18LCc"], progress: 0, ending: 4 },
     { username: "Wunba", links: ["FEfV--HOqGY", "smieZ1tvmis", "xJyEq2F4-Sw", "inVlZdbxKEI"], progress: 0 },
     { username: "YeahJaron", links: ["0xC5cfaVz9U", "1n3wMfVaBh8", "N-fZ6pj_Jdg", "TFkDzU9qClI"], progress: 0 }
 ]
