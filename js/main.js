@@ -65,33 +65,41 @@ function hover(linkobj, chapter) {
     $("#progress").removeClass("beginning")
     $("#progress").removeClass("ending")
     $("#progress").removeClass("c2")
+    $("#progress").removeClass("c3")
 
     if (end) {
         $("#progress").addClass("ending")
     } else {
         if (linkobj.progress == 0) {
             $("#progress").addClass("beginning")
-        } else if (linkobj.progress > 1) {
+        } else if (linkobj.progress === 2) {
             $("#progress").addClass("c2")
+        } else if (linkobj.progress > 2) {
+            $("#progress").addClass("c3")
         }
     }
 
     if (previous_position.username !== linkobj.username) {
         let sound = "grass"
         let volume = 0.04
+        let random = 4
 
         if (end) {
             sound = "stone"
-            volume = 0.12
+            volume = 0.10
         } else if (linkobj.progress === 1) {
             sound = "gravel"
-            volume = 0.03
-        } else if (linkobj.progress > 1) {
+            volume = 0.025
+        } else if (linkobj.progress === 2 || linkobj.progress > 3) {
             sound = "stone-step"
             volume = 0.12
+        } else if (linkobj.progress === 3) {
+            sound = "eyeplace"
+            volume = 0.08
+            random = 3
         }
 
-        sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*4)}.ogg`)
+        sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
         sound.volume = volume
         sound.play()
     }

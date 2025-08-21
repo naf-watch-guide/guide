@@ -98,6 +98,10 @@ td.ending {
     background-image: url(assets/img/ston.png);
 }
 
+#progress.c3 {
+    background-image: url(assets/img/small_ston.png);
+}
+
 #names td {
     background-image: url(assets/img/grassy_top.png);
 }
