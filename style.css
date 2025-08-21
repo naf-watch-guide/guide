@@ -223,5 +223,10 @@ button {
 
     body {
         margin: 0;
+        overflow: scroll;
+    }
+
+    html {
+        overflow: hidden;
     }
 }
