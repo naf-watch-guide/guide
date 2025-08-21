@@ -100,6 +100,10 @@ function hover(linkobj, chapter) {
             sound = "eyeplace"
             volume = 0.07
             random = 3
+        } else if (linkobj.progress === 4) {
+            sound = "hurt_closed"
+            volume = 0.07
+            random = 5
         }
 
         sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
