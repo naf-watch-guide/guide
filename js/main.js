@@ -161,6 +161,9 @@ function main() {
     // set callbacks
     $("#overlay-yes").on("click", () => {
         iamwatching.progress += 1
+        if (iamwatching.links[iamwatching.progress] === "skip") {
+            iamwatching.progress += 1
+        }
         $("#overlay").removeClass("overlay-visible")
         sound = new Audio(`assets/sound/click.ogg`)
         sound.volume = 0.18
@@ -213,10 +216,13 @@ function regen() {
                 locked = false
                 const invisible = chapter > linkobj.progress + 1
                 const ending = linkobj.ending == chapter - 1
+                const skip = videoID === "skip"
 
                 var fullLink = ""
                 
-                if (ending && !invisible) {
+                if (skip && !invisible) {
+                    fullLink = "..."
+                } else if (ending && !invisible) {
                     fullLink = "The End..."
                 } else if (!invisible) {
                     if (locked) {
