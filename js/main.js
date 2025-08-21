@@ -95,7 +95,7 @@ function hover(linkobj, chapter) {
             volume = 0.12
         } else if (linkobj.progress === 3) {
             sound = "eyeplace"
-            volume = 0.08
+            volume = 0.07
             random = 3
         }
 
