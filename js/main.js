@@ -154,12 +154,18 @@ function main() {
     $("#overlay-yes").on("click", () => {
         iamwatching.progress += 1
         $("#overlay").removeClass("overlay-visible")
+        sound = new Audio(`assets/sound/click.ogg`)
+        sound.volume = 0.18
+        sound.play()
         regen()
         save()
     })
 
     $("#overlay-no").on("click", () => {
         $("#overlay").removeClass("overlay-visible")
+        sound = new Audio(`assets/sound/click.ogg`)
+        sound.volume = 0.18
+        sound.play()
     })
 
     $("#swapper").on("click", () => {
