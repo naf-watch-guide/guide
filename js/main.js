@@ -105,7 +105,7 @@ function hover(linkobj, chapter) {
             random = 3
         } else if (linkobj.progress === 4) {
             sound = "hurt_closed"
-            volume = 0.07
+            volume = 0.05
             random = 5
         }
 
