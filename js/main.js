@@ -9,12 +9,18 @@ linkparams = {
     }
 }
 
+seenintro = false
+
 function main() {
     load()
 
     overlayInit()
     optionsInit()
     tableInit()
+
+    if (!seenintro) {
+        showIntro()
+    }
 }
 
 

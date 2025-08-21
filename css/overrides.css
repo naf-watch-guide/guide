@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    #main {
+        margin-left: 0;
+        margin-top: 20vh;
+    }
+
+    /*#logo {
+        width: 100%;
+        left: 10px;
+    }*/
+
+    #sidebar {
+        height: 128px;
+        width: 100vw;
+        flex-direction: row;
+    }
+
+    #logo-container {
+        /*width: 33vw;*/
+        display: none;
+    }
+
+    #options-table {
+        display: flex;
+        flex-direction: row;
+        border-spacing: 0;
+    }
+
+    #options-table tr {
+        display: table-cell;
+    }
+
+    #options-table td {
+        width: 42vw;
+        /*height: 128px;*/
+        padding-right: 4vw;
+        padding-left: 4vw;
+    }
+
+    #video-table {
+        border-spacing: 0;
+    }
+
+    button {
+        padding-bottom: .3em;
+    }
+
+    button.smallable {
+        width: 290px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    #main {
+        overflow: scroll;
+    }
+}

@@ -1,0 +1,80 @@
+button {
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+    font-family: 'Minecraftia', monospace;
+    font-size: 12pt;
+    color: #DDD;
+    text-shadow: 2px 2px #000A;
+    padding-top: .3em;
+    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    width: 360px;
+}
+
+button.hidden {
+    display: none;
+}
+
+#options {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    left: 35vw;
+    top: 40vw;
+    display: flex;
+}
+
+#options.hidden {
+    display: none;   
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../assets/img/small_dort.png);
+}
+
+#intro.hidden {
+    display: none;   
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+#overlay.overlay-visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#overlay div {
+    padding: 32px;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+/*.overlay-button {
+    position: relative;
+}*/
+
+#video-popup {
+    display: flex;
+    flex-direction: column;
+}
+
+#video-popup.hidden {
+    display: none;   
+}
+
+span {
+    text-align: center;
+}

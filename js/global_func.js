@@ -30,4 +30,6 @@ function load() {
         element.progress = localStorage.getItem(element.username + linkparams.season) ?? 0;
         element.progress = Number(element.progress)
     });
+
+    seenintro = Boolean(localStorage.getItem("seenintro", true)) ?? false
 }

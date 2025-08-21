@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('../font/Minecraftia-Regular.ttf') format('truetype');
+}
+
+html {
+    font-family: 'Minecraftia', monospace;
+    font-size: 12pt;
+    color: #FFF;
+    text-shadow: 2px 2px #000A;
+}
+
+body {
+    background-image: url(../assets/img/dart.png);
+}
+
+.thumbnail {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;   
+}
+
+#logo {
+    align-self: center;
+    width: min-content;
+}
+
+#subtitle {
+    align-self: center;
+}
+
+#main {
+    margin-left: 270pt;
+}
+
+#swapper {
+    cursor: pointer;
+}
+
+td {
+    width: 160px;
+    height: 128px; /* 80pt originally.*/
+    text-align: center;
+    padding-right: 16px; /*8pt*/
+    padding-left: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url(../assets/img/small_dort.png);
+}
+
+td.ending {
+    background-image: url(../assets/img/bedrock.png);
+}
+
+#progress.beginning {
+    background-image: url(../assets/img/grassy_top.png);
+}
+
+#progress.c2 {
+    background-image: url(../assets/img/ston.png);
+}
+
+#progress.c3 {
+    background-image: url(../assets/img/small_ston.png);
+}
+
+#progress.c4 {
+    background-image: url(../assets/img/purpur.png);
+}

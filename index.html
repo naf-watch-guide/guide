@@ -11,7 +11,10 @@
     <script type="text/javascript" src="js/links.js"></script>
     <script type="text/javascript" src="js/video_table.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/overrides.css">
 </head>
 <body>
     <div id="sidebar">
@@ -25,43 +28,45 @@
             <!--<tr id="2"><td>Season 1 Guide...</td></tr>-->
         </table>
     </div>
-    <div id="options">
-        <table>
-            <tr>
-                <td>
-                    <button id="options-mystery-button">Enable Recommended Viewing Order</button>
-                    <span>Unlock choices for who to watch based on what videos you've already seen.</span>
-                </td>
-                <td>
-                    <button id="options-mystery-button">Enable Mystery Mode</button>
-                    <span>Mystery Mode is when you when uh when you uh uh uh uh</span>
-                </td>
-                <td>
-                    <button id="options-mystery-button">Enable Mystery Mode</button>
-                    <span>Mystery Mode is when you when uh when you uh uh uh uh</span>
-                </td>
-            </tr>
-        </table>
-        
-    </div>
-    <!--<div id="intro">
-        <table>
-            <tr>
-                <td>
-                    <span>Hello! Are you new to the series?</span>
-                </td>
-                <td>
-                    <button id="options-mystery-button">Yeah</button>
-                </td>
-                <td>
-                    <button id="options-mystery-button">No lol</button>
-                </td>
-            </tr>
-        </table>
-    </div>-->
     <div id="overlay">
-        <button id="overlay-yes" class="overlay-button">I've watched the video!</button>
-        <button id="overlay-no" class="overlay-button">I did NOT watch the video!</button>
+        <div id="video-popup" class="hidden">
+            <button id="overlay-yes" class="overlay-button">I've watched the video!</button>
+            <button id="overlay-no" class="overlay-button">I did NOT watch the video!</button>
+        </div>
+        <div id="options" class="hidden">
+            <table>
+                <tr>
+                    <td>
+                        <button id="options-mystery-button">Enable Recommended Viewing Order</button>
+                        <span>Unlock choices for who to watch based on what videos you've already seen.</span>
+                    </td>
+                    <td>
+                        <button id="options-mystery-button">Enable Mystery Mode</button>
+                        <span>Mystery Mode is when you when uh when you uh uh uh uh</span>
+                    </td>
+                    <td>
+                        <button id="options-mystery-button">Enable Mystery Mode</button>
+                        <span>Mystery Mode is when you when uh when you uh uh uh uh</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="intro">
+            <table>
+                <tr>
+                    <span id="intro-explainer">Hello! Are you new to the series?</span>
+                </tr>
+                <tr>
+                    <button id="intro-yes" class="smallable">Yeah</button>
+                </tr>
+                <tr>
+                    <button id="intro-no" class="smallable">No</button>
+                </tr>
+                <tr>
+                    <button id="intro-okay" class="hidden smallable">Gotcha</button>
+                </tr>
+            </table>
+        </div>
     </div>
     <div id="main">
         <table id="video-table">
