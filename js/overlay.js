@@ -10,16 +10,16 @@ function overlayInit() {
 
         if (iamwatching.progress !== iamwatching.ending) {
             sound = new Audio(`assets/sound/click.ogg`)
-            sound.volume = 0.3
+            sound.volume = 0.45
             sound.play()
             if (iamwatching.progress !== 8) {
                 sound = new Audio(`assets/sound/levelup.ogg`)
-                sound.volume = 0.1
+                sound.volume = 0.2
                 sound.play()
             }
         } else {
             sound = new Audio(`assets/sound/fallbig.ogg`)
-            sound.volume = 0.3
+            sound.volume = 0.45
             sound.play()
         }
     })
@@ -34,7 +34,7 @@ function overlayInit() {
         $("#intro-okay").removeClass("hidden")
         $("#intro-explainer").html("1. Each column has one person's videos.<br>2. Right now, you can only see the first video from each person.<br>3. Watching a video reveals the next one by the same person.<br>4. There is no watch order for creators.")
         sound = new Audio(`assets/sound/click.ogg`)
-        sound.volume = 0.3
+        sound.volume = 0.45
         sound.play()
     })
 
@@ -57,7 +57,7 @@ function closeOverlay(sound = true) {
     $("#overlay").removeClass("overlay-visible")
     if (!sound) return
     sound = new Audio(`assets/sound/click.ogg`)
-    sound.volume = 0.3
+    sound.volume = 0.45
     sound.play()
 }
 
@@ -113,7 +113,7 @@ function showVideoConfirmation(linkobj, chapter) {
         iamwatching = linkobj
 
         let sound = "break/grass"
-        let volume = 0.12
+        let volume = 0.18
         let random = 4
 
         switch (chapter) {
@@ -121,22 +121,22 @@ function showVideoConfirmation(linkobj, chapter) {
                 break;
             case 2:
                 sound = "break/gravel"
-                volume = 0.12
+                volume = 0.18
                 random = 4
                 break;
             case 4:
                 sound = "endportal"
-                volume = 0.08
+                volume = 0.12
                 random = 0
                 break;
             case 5:
                 sound = "hurt"
-                volume = 0.1
+                volume = 0.15
                 random = 4
                 break;
             default:
                 sound = "stone"
-                volume = 0.2
+                volume = 0.3
                 random = 4
         }
 
@@ -152,6 +152,6 @@ function showVideoConfirmation(linkobj, chapter) {
     })
 
     sound = new Audio(`assets/sound/orb.ogg`)
-    sound.volume = 0.1
+    sound.volume = 0.15
     sound.play()
 }
