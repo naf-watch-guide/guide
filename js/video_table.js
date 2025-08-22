@@ -55,16 +55,16 @@ function regenVideos() {
                         fullLink = `<img class="thumbnail" src="assets/locked.jpg"}>`
                     } else if (videoID !== undefined) {
                         const img = IMG_PREFIX + videoID + IMG_SUFFIX
-                        fullLink = `<a href="${VIDEO_PREFIX + videoID}" target="_blank"><img class="thumbnail" src=${img}></a>`
+                        fullLink = `<img class="thumbnail" src=${img}>`
                     } else {
                         fullLink = "The End...?"
                     } 
                 }
 
                 $(`#chapter-${chapter}`).append(`<td id="video-${linkobj.username}-${chapter}" class="video${locked ? "" : " locked"}">${fullLink}</td>`)
-                if (Number(linkobj.progress) + 1 === chapter && linkobj.ending + 1 !== chapter && !locked && videoID) {
+                if (!invisible && videoID) {
                     $(`#video-${linkobj.username}-${chapter}`).on("click", (event) => {
-                        linkClicked(linkobj)
+                        showVideoConfirmation(linkobj, chapter)
                     })
                 }
 
@@ -144,9 +144,4 @@ function hover(linkobj, chapter) {
     }
 
     previous_position = { username: linkobj.username, chapter: chapter }
-}
-
-function linkClicked(linkobj) {
-    $("#overlay").addClass("overlay-visible")
-    iamwatching = linkobj
 }

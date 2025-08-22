@@ -24,11 +24,15 @@ function overlayInit() {
         }
     })
 
+    $("#overlay-no").on("click", () => {
+        closeOverlay()
+    })
+
     $("#intro-yes").on("click", () => {
         $("#intro-yes").addClass("hidden")
         $("#intro-no").addClass("hidden")
         $("#intro-okay").removeClass("hidden")
-        $("#intro-explainer").html("I hope you give it a shot, I really love this series. Try watching some of rekrap2's first video!")
+        $("#intro-explainer").html("1. Each column has one person's videos.<br>2. Right now, you can only see the first video from each person.<br>3. Watching a video reveals the next one by the same person.<br>4. There is no watch order for creators.")
         sound = new Audio(`assets/sound/click.ogg`)
         sound.volume = 0.18
         sound.play()
@@ -43,6 +47,10 @@ function overlayInit() {
         closeOverlay()
         localStorage.setItem("seenintro", true);
     })
+
+    $("#overlay-confirm-no").on("click", () => {
+        closeOverlay()
+    })
 }
 
 function closeOverlay() {
@@ -56,6 +64,13 @@ function hideAll() {
     $("#intro").addClass("hidden")
     $("#video-popup").addClass("hidden")
     $("#options").addClass("hidden")
+    $("#video-confirm").addClass("hidden")
+}
+
+function showDidYouWatch() {
+    hideAll()
+    $("#overlay").addClass("overlay-visible")
+    $("#video-popup").removeClass("hidden")
 }
 
 function showIntro() {
@@ -65,5 +80,65 @@ function showIntro() {
     $("#intro-yes").removeClass("hidden")
     $("#intro-no").removeClass("hidden")
     $("#intro-okay").addClass("hidden")
-    $("#intro-explainer").html("Hello! Are you new to the series?")
+    $("#intro-explainer").html("Hey, thanks for checking out the website!<br>It's easy to use, but it needs a short explanation.")
+}
+
+function showVideoConfirmation(linkobj, chapter) {
+    hideAll()
+    $("#overlay").addClass("overlay-visible")
+    $("#video-confirm").removeClass("hidden")
+
+    $("#video-link").attr("href", VIDEO_PREFIX + linkobj.links[chapter])
+
+    let realCount = 0
+    let done = false
+    linkobj.links.forEach((element, idx) => {
+        if (element !== "skip" && !done) {
+            realCount++
+        }
+        if (idx + 1 === chapter) {
+            done = true
+        }
+    });
+    let extra = "th"
+    if (realCount === 1) {extra = "st"}
+    if (realCount === 2) {extra = "nd"}
+    if (realCount === 3) {extra = "rd"}
+    
+    $("#overlay-confirm-watchwhat").html(`Open a link to ${linkobj.username}'s ${realCount}${extra} video?`)
+
+    $("#overlay-confirm-yes").off()
+    $("#overlay-confirm-yes").on("click", () => {
+        iamwatching = linkobj
+        if (linkobj.progress === chapter - 1) {
+            sound = new Audio(`assets/sound/click.ogg`)
+            sound.volume = 0.18
+            sound.play()
+            showDidYouWatch()
+        } else {
+            closeOverlay()
+        }
+    })
+
+    let sound = "break/grass"
+    let volume = 0.04
+    let random = 4
+
+    switch (chapter) {
+        case 1:
+            break;
+        case 2:
+            sound = "break/gravel"
+            volume = 0.025
+            random = 4
+            break;
+        default:
+            sound = "stone"
+            volume = 0.10
+            random = 4
+    }
+
+    sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
+    sound.volume = volume
+    sound.play()
 }
