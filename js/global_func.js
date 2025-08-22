@@ -11,7 +11,7 @@ function swap() {
     save()
     $("#swapper").html(`Swap to <b>Season ${linkparams.season}</b>?`)
     linkparams.season = linkparams.season === 1 ? 2 : 1
-    $("#subtitle").html(`The Season ${linkparams.season} Watch Guide`)
+    $("#subtitle").html(`The Season ${linkparams.season} Watch Tracker`)
     load()
     
     regenNames()
