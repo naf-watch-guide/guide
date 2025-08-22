@@ -128,6 +128,7 @@ function showVideoConfirmation(linkobj, chapter) {
                 sound = "stone"
                 volume = 0.6
                 random = 4
+                break;
             case 4:
                 sound = "endportal"
                 volume = 0.18
