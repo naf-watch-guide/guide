@@ -79,7 +79,7 @@ function regenVideos() {
                         $(`#video-${linkobj.username}-${chapter}`).addClass("ending")
                     }
                 }*/
-                $(`#video-${linkobj.username}-${chapter}`).addClass(`variant-${linkobj.random[chapter]}`)
+                $(`#video-${linkobj.username}-${chapter}`).addClass(`variant-${linkobj.random[chapter-1]}`)
             })
         }
     })
