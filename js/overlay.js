@@ -10,7 +10,7 @@ function overlayInit() {
 
         if (iamwatching.progress !== iamwatching.ending) {
             sound = new Audio(`assets/sound/click.ogg`)
-            sound.volume = 0.18
+            sound.volume = 0.15
             sound.play()
             if (iamwatching.progress !== 8) {
                 sound = new Audio(`assets/sound/levelup.ogg`)
@@ -34,7 +34,7 @@ function overlayInit() {
         $("#intro-okay").removeClass("hidden")
         $("#intro-explainer").html("1. Each column has one person's videos.<br>2. Right now, you can only see the first video from each person.<br>3. Watching a video reveals the next one by the same person.<br>4. There is no watch order for creators.")
         sound = new Audio(`assets/sound/click.ogg`)
-        sound.volume = 0.18
+        sound.volume = 0.15
         sound.play()
     })
 
@@ -57,7 +57,7 @@ function closeOverlay(sound = true) {
     $("#overlay").removeClass("overlay-visible")
     if (!sound) return
     sound = new Audio(`assets/sound/click.ogg`)
-    sound.volume = 0.18
+    sound.volume = 0.15
     sound.play()
 }
 
@@ -113,7 +113,7 @@ function showVideoConfirmation(linkobj, chapter) {
         iamwatching = linkobj
 
         let sound = "break/grass"
-        let volume = 0.04
+        let volume = 0.06
         let random = 4
 
         switch (chapter) {
@@ -121,7 +121,7 @@ function showVideoConfirmation(linkobj, chapter) {
                 break;
             case 2:
                 sound = "break/gravel"
-                volume = 0.04
+                volume = 0.06
                 random = 4
                 break;
             case 4:
@@ -131,12 +131,12 @@ function showVideoConfirmation(linkobj, chapter) {
                 break;
             case 5:
                 sound = "hurt"
-                volume = 0.04
+                volume = 0.05
                 random = 4
                 break;
             default:
                 sound = "stone"
-                volume = 0.08
+                volume = 0.10
                 random = 4
         }
 
