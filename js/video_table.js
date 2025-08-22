@@ -14,11 +14,7 @@ function regenNames() {
     $("#names").empty()
     linkparams.links.forEach(linkobj => {
         if (linkobj.links.length !== 0) {
-            if (linkobj.username === "rekrap2") {
-                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><b>(RECOMMENDED)</td>`)
-            } else if (linkparams.season === 2 && linkobj.username === "Loony") {
-                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><b>(RECOMMENDED)</td>`)
-            } else if (linkparams.season === 1 && linkobj.username === "Wunba") {
+            if (linkparams.season === 1 && linkobj.username === "Wunba") {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story<br><i>(COMPILATION)</td>`)
             } else {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
