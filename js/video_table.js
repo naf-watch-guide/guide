@@ -62,7 +62,7 @@ function regenVideos() {
                 }
 
                 $(`#chapter-${chapter}`).append(`<td id="video-${linkobj.username}-${chapter}" class="video${locked ? "" : " locked"}">${fullLink}</td>`)
-                if (!invisible && videoID) {
+                if (!invisible && videoID !== undefined && !skip) {
                     $(`#video-${linkobj.username}-${chapter}`).on("click", (event) => {
                         showVideoConfirmation(linkobj, chapter)
                     })
