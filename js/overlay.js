@@ -89,7 +89,7 @@ function showVideoConfirmation(linkobj, chapter) {
     $("#overlay").addClass("overlay-visible")
     $("#video-confirm").removeClass("hidden")
 
-    $("#video-link").attr("href", VIDEO_PREFIX + linkobj.links[chapter])
+    $("#video-link").attr("href", VIDEO_PREFIX + linkobj.links[chapter - 1])
 
     let realCount = 0
     let done = false
