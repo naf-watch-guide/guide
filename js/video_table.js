@@ -96,6 +96,7 @@ function hover(linkobj, chapter) {
     $("#progress").removeClass("c2")
     $("#progress").removeClass("c3")
     $("#progress").removeClass("c4")
+    $("#progress").removeClass("c5")
 
     if (end) {
         $("#progress").addClass("ending")
@@ -106,22 +107,24 @@ function hover(linkobj, chapter) {
             $("#progress").addClass("c2")
         } else if (linkobj.progress === 4) {
             $("#progress").addClass("c4")
-        } else if (linkobj.progress === 3 || linkobj.progress > 4) {
+        } else if (linkobj.progress === 3) {
             $("#progress").addClass("c3")
+        } else if (linkobj.progress > 4) {
+            $("#progress").addClass("c5")
         }
     }
 
     if (previous_position.username !== linkobj.username) {
-        sound = "stone"
-        volume = 0.45
-        random = 4
+        let sound = "stone"
+        let volume = 0.45
+        let random = 4
 
-        if (end) {
+        if (!end) {
             switch (linkobj.progress) {
                 case 0:
-                    let sound = "grass"
-                    let volume = 0.2
-                    let random = 6
+                    sound = "grass"
+                    volume = 0.2
+                    random = 6
                     break;
                 case 1:
                     sound = "gravel"
@@ -142,6 +145,11 @@ function hover(linkobj, chapter) {
                     sound = "hurt_closed"
                     volume = 0.22
                     random = 5
+                    break;
+                default:
+                    sound = "deepslate"
+                    volume = 0.65
+                    random = 6
                     break;
             }
         } 

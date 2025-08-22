@@ -124,6 +124,10 @@ function showVideoConfirmation(linkobj, chapter) {
                 volume = 0.27
                 random = 4
                 break;
+            case 3:
+                sound = "stone"
+                volume = 0.6
+                random = 4
             case 4:
                 sound = "endportal"
                 volume = 0.18
@@ -131,12 +135,12 @@ function showVideoConfirmation(linkobj, chapter) {
                 break;
             case 5:
                 sound = "hurt"
-                volume = 0.22
+                volume = 0.2
                 random = 4
                 break;
             default:
-                sound = "stone"
-                volume = 0.6
+                sound = "break/deepslate"
+                volume = 1
                 random = 4
         }
 
