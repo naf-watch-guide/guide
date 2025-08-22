@@ -112,31 +112,40 @@ function hover(linkobj, chapter) {
     }
 
     if (previous_position.username !== linkobj.username) {
-        let sound = "grass"
-        let volume = 0.2
-        let random = 6
+        sound = "stone"
+        volume = 0.45
+        random = 4
 
         if (end) {
-            sound = "stone"
-            volume = 0.45
-            random = 4
-        } else if (linkobj.progress === 1) {
-            sound = "gravel"
-            volume = 0.12
-            random = 4
-        } else if (linkobj.progress === 2 || linkobj.progress > 4) {
-            sound = "stone-step"
-            volume = 0.45
-            random = 4
-        } else if (linkobj.progress === 3) {
-            sound = "eyeplace"
-            volume = 0.32
-            random = 3
-        } else if (linkobj.progress === 4) {
-            sound = "hurt_closed"
-            volume = 0.22
-            random = 5
-        }
+            switch (linkobj.progress) {
+                case 0:
+                    let sound = "grass"
+                    let volume = 0.2
+                    let random = 6
+                    break;
+                case 1:
+                    sound = "gravel"
+                    volume = 0.12
+                    random = 4
+                    break;
+                case 2:
+                    sound = "stone-step"
+                    volume = 0.45
+                    random = 4
+                    break;
+                case 3:
+                    sound = "eyeplace"
+                    volume = 0.32
+                    random = 3
+                    break;
+                case 4:
+                    sound = "hurt_closed"
+                    volume = 0.22
+                    random = 5
+                    break;
+            }
+        } 
+            
 
         sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
         sound.volume = volume
