@@ -53,8 +53,9 @@ function overlayInit() {
     })
 }
 
-function closeOverlay() {
+function closeOverlay(sound = true) {
     $("#overlay").removeClass("overlay-visible")
+    if (!sound) return
     sound = new Audio(`assets/sound/click.ogg`)
     sound.volume = 0.18
     sound.play()
@@ -110,35 +111,47 @@ function showVideoConfirmation(linkobj, chapter) {
     $("#overlay-confirm-yes").off()
     $("#overlay-confirm-yes").on("click", () => {
         iamwatching = linkobj
+
+        let sound = "break/grass"
+        let volume = 0.04
+        let random = 4
+
+        switch (chapter) {
+            case 1:
+                break;
+            case 2:
+                sound = "break/gravel"
+                volume = 0.04
+                random = 4
+                break;
+            case 4:
+                sound = "endportal"
+                volume = 0.04
+                random = 0
+                break;
+            case 5:
+                sound = "hurt"
+                volume = 0.04
+                random = 4
+                break;
+            default:
+                sound = "stone"
+                volume = 0.08
+                random = 4
+        }
+
+        sound = new Audio(`assets/sound/${sound}${random !== 0 ? Math.ceil(Math.random()*random) : ""}.ogg`)
+        sound.volume = volume
+        sound.play()
+
         if (linkobj.progress === chapter - 1) {
-            sound = new Audio(`assets/sound/click.ogg`)
-            sound.volume = 0.18
-            sound.play()
             showDidYouWatch()
         } else {
-            closeOverlay()
+            closeOverlay(false)
         }
     })
 
-    let sound = "break/grass"
-    let volume = 0.04
-    let random = 4
-
-    switch (chapter) {
-        case 1:
-            break;
-        case 2:
-            sound = "break/gravel"
-            volume = 0.025
-            random = 4
-            break;
-        default:
-            sound = "stone"
-            volume = 0.10
-            random = 4
-    }
-
-    sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
-    sound.volume = volume
+    sound = new Audio(`assets/sound/orb.ogg`)
+    sound.volume = 0.05
     sound.play()
 }
