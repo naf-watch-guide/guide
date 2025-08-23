@@ -6,12 +6,14 @@ function optionsInit() {
     $("#options-swap").on("click", () => {
         swap()
         closeOverlay()
+        click()
     })
 
     $("#options-progress-mode").on("click", () => {
         settingprogress = !settingprogress
         regenVideos()
         closeOverlay()
+        click()
     })
 }
 

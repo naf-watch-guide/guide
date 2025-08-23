@@ -8,24 +8,12 @@ function overlayInit() {
         regenVideos()
         save()
 
-        if (iamwatching.progress !== iamwatching.ending) {
-            sound = new Audio(`assets/sound/click.ogg`)
-            sound.volume = 0.60
-            sound.play()
-            if (iamwatching.progress !== 8) {
-                sound = new Audio(`assets/sound/levelup.ogg`)
-                sound.volume = 0.3
-                sound.play()
-            }
-        } else {
-            sound = new Audio(`assets/sound/fallbig.ogg`)
-            sound.volume = 0.75
-            sound.play()
-        }
+        finishVideoSound()
     })
 
     $("#overlay-no").on("click", () => {
         closeOverlay()
+        click()
     })
 
     $("#intro-yes").on("click", () => {
@@ -33,37 +21,34 @@ function overlayInit() {
         $("#intro-no").addClass("hidden")
         $("#intro-okay").removeClass("hidden")
         $("#intro-explainer").html("1. Each column has one person's videos.<br>2. Right now, you can only see the first video from each person.<br>3. Watching a video reveals the next one by the same person.<br>4. There is no watch order for creators.")
-        sound = new Audio(`assets/sound/click.ogg`)
-        sound.volume = 0.60
-        sound.play()
+        click()
     })
 
     $("#intro-no").on("click", () => {
         closeOverlay()
+        click()
     })
 
     $("#intro-okay").on("click", () => {
         closeOverlay()
+        click()
         localStorage.setItem("seenintro", true);
     })
 
     $("#overlay-confirm-no").on("click", () => {
         closeOverlay()
+        click()
     })
-    
+
     $("#overlay").on("click", (e) => {
         if ($(e.target).is(".closeable")) {
-            closeOverlay(false)
+            closeOverlay()
         }
     })
 }
 
-function closeOverlay(sound = true) {
+function closeOverlay() {
     $("#overlay").removeClass("overlay-visible")
-    if (!sound) return
-    sound = new Audio(`assets/sound/click.ogg`)
-    sound.volume = 0.60
-    sound.play()
 }
 
 function hideAll() {
@@ -118,43 +103,7 @@ function showVideoConfirmation(linkobj, chapter) {
     $("#overlay-confirm-yes").off()
     $("#overlay-confirm-yes").on("click", () => {
         iamwatching = linkobj
-
-        let sound = "break/grass"
-        let volume = 0.27
-        let random = 4
-
-        switch (chapter) {
-            case 1:
-                break;
-            case 2:
-                sound = "break/gravel"
-                volume = 0.27
-                random = 4
-                break;
-            case 3:
-                sound = "stone"
-                volume = 0.6
-                random = 4
-                break;
-            case 4:
-                sound = "endportal"
-                volume = 0.18
-                random = 0
-                break;
-            case 5:
-                sound = "hurt"
-                volume = 0.2
-                random = 4
-                break;
-            default:
-                sound = "break/deepslate"
-                volume = 1
-                random = 4
-        }
-
-        sound = new Audio(`assets/sound/${sound}${random !== 0 ? Math.ceil(Math.random()*random) : ""}.ogg`)
-        sound.volume = volume
-        sound.play()
+        getPlayVideoSound(chapter).play()
 
         if (linkobj.progress === chapter - 1) {
             showDidYouWatch()
@@ -163,7 +112,5 @@ function showVideoConfirmation(linkobj, chapter) {
         }
     })
 
-    sound = new Audio(`assets/sound/orb.ogg`)
-    sound.volume = 0.18
-    sound.play()
+    orb()
 }

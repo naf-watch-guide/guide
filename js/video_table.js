@@ -97,6 +97,7 @@ function hover(linkobj, chapter) {
     $("#progress").removeClass("c3")
     $("#progress").removeClass("c4")
     $("#progress").removeClass("c5")
+    // reminder: gold for survivors
 
     if (end) {
         $("#progress").addClass("ending")
@@ -115,49 +116,7 @@ function hover(linkobj, chapter) {
     }
 
     if (previous_position.username !== linkobj.username) {
-        let sound = "stone"
-        let volume = 0.45
-        let random = 4
-
-        if (!end) {
-            switch (linkobj.progress) {
-                case 0:
-                    sound = "grass"
-                    volume = 0.2
-                    random = 6
-                    break;
-                case 1:
-                    sound = "gravel"
-                    volume = 0.12
-                    random = 4
-                    break;
-                case 2:
-                    sound = "stone-step"
-                    volume = 0.45
-                    random = 4
-                    break;
-                case 3:
-                    sound = "eyeplace"
-                    volume = 0.32
-                    random = 3
-                    break;
-                case 4:
-                    sound = "hurt_closed"
-                    volume = 0.22
-                    random = 5
-                    break;
-                default:
-                    sound = "deepslate"
-                    volume = 0.65
-                    random = 6
-                    break;
-            }
-        } 
-            
-
-        sound = new Audio(`assets/sound/${sound}${Math.ceil(Math.random()*random)}.ogg`)
-        sound.volume = volume
-        sound.play()
+        getHoverVideoSound(linkobj).play()
     }
 
     previous_position = { username: linkobj.username, chapter: chapter }
