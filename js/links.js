@@ -22,7 +22,7 @@ links_s2 = [
     { username: "ClownPierce", links: [], progress: 0 },
     { username: "Crafty­Masterman", links: ["fM-HIQY94Fk", "T8V2rxxG7Yc", "skip", "FwhVK2defKI"], progress: 0, ending: 4 },
     { username: "Evbo", links: ["0IyLA5irWPk"], progress: 0, ending: 1 },
-    { username: "LegunDOS", links: ["t8p8lF53XdQ", "9XYIXtj-bIE", "qtxIZQ8Vkb4", "5oxrKVymbXk"], progress: 0 },
+    { username: "Legundo", links: ["t8p8lF53XdQ", "9XYIXtj-bIE", "qtxIZQ8Vkb4", "5oxrKVymbXk"], progress: 0 },
     { username: "Loony", links: ["ssYpONYsJFY", "WVe-AmEl9B8", "olroMCN2SVw", "GAvQ3fX5e6E"], progress: 0, ending: 4 },
     { username: "Midmysticx", links: ["1obpz9NNnns", "W-YFuoLFQbM", "Sjt3GYksO5c", "PN7kt06QYxE"], progress: 0 },
     { username: "MiniMuka", links: ["YTF11t91rUg", "f4gsPUsJh1o", "6FEL7OUc2eQ", "H36cQTCJI5M"], progress: 0, ending: 4 },
