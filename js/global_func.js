@@ -10,6 +10,7 @@ function resetProgress() {
 function swap() {
     save()
     $("#options-swap").html(`Swap to Season ${linkparams.season}`)
+    $("#swap-text").html(`See the Season ${linkparams.season} tracker.`)
     linkparams.season = linkparams.season === 1 ? 2 : 1
     $("#subtitle").html(`The Season ${linkparams.season} Watch Tracker`)
     load()
