@@ -100,6 +100,12 @@ function getPlayVideoSound(chapter) {
     return sound
 }
 
+function portal() {
+    sound = new Audio(`assets/sound/endportal.ogg`)
+    sound.volume = 0.18 * global_volume
+    sound.play()
+}
+
 function finishVideoSound() {
     if (iamwatching.progress !== iamwatching.ending) {
         click()

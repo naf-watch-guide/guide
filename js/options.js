@@ -1,3 +1,5 @@
+areyousure = false
+
 function optionsInit() {
     $("#swapper").on("click", () => {
         showOptions()
@@ -14,6 +16,19 @@ function optionsInit() {
         regenVideos()
         closeOverlay()
         click()
+    })
+
+    $("#options-reset").on("click", () => {
+        if (!areyousure) {
+            areyousure = true
+            $("#options-reset").html("Are you SURE?")
+            click()
+            return
+        }
+        resetProgress()
+        closeOverlay()
+        portal()
+        $("#options-reset").html("Reset This Season")
     })
 }
 

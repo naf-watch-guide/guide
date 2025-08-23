@@ -48,6 +48,8 @@ function overlayInit() {
 }
 
 function closeOverlay() {
+    areyousure = false
+    $("#options-reset").html("Reset This Season")
     $("#overlay").removeClass("overlay-visible")
 }
 
