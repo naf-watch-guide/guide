@@ -9,7 +9,7 @@ function optionsInit() {
     })
 
     $("#options-progress-mode").on("click", () => {
-        settingprogress = true
+        settingprogress = !settingprogress
         regenVideos()
         closeOverlay()
     })
