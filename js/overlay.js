@@ -49,7 +49,7 @@ function overlayInit() {
 
 function closeOverlay() {
     areyousure = false
-    $("#options-reset").html("Reset This Season")
+    $("#options-reset").html(`<div class="sub-button">Reset This Season</div>`)
     $("#overlay").removeClass("overlay-visible")
 }
 

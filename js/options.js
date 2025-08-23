@@ -21,14 +21,14 @@ function optionsInit() {
     $("#options-reset").on("click", () => {
         if (!areyousure) {
             areyousure = true
-            $("#options-reset").html("Are you SURE?")
+            $("#options-reset").html(`<div class="sub-button">Are you SURE?</div>`)
             click()
             return
         }
         resetProgress()
         closeOverlay()
         portal()
-        $("#options-reset").html("Reset This Season")
+        $("#options-reset").html(`<div class="sub-button">Reset This Season</div>`)
     })
 }
 

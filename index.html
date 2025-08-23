@@ -30,24 +30,24 @@
         </table>
     </div>
     <div id="overlay">
-        <div id="video-confirm" class="hidden">
+        <div id="video-confirm" class="hidden popup">
             <span id="overlay-confirm-watchwhat">Watch that?</span>
-            <a id="video-link" href="" target="_blank"><button id="overlay-confirm-yes" class="overlay-button smallable">Yes!</button></a>
-            <button id="overlay-confirm-no" class="overlay-button smallable">No...</button>
+            <a id="video-link" href="" target="_blank"><button id="overlay-confirm-yes" class="overlay-button smallable"><div class="sub-button">Yes!</div></button></a>
+            <button id="overlay-confirm-no" class="overlay-button smallable"><div class="sub-button">No...</div></button>
         </div>
-        <div id="video-popup" class="hidden">
-            <button id="overlay-yes" class="overlay-button">I've watched the video!</button>
-            <button id="overlay-no" class="overlay-button">I did NOT watch the video!</button>
+        <div id="video-popup" class="hidden popup">
+            <button id="overlay-yes" class="overlay-button"><div class="sub-button">I've watched the video!</div></button>
+            <button id="overlay-no" class="overlay-button"><div class="sub-button">I did NOT watch the video!</div></button>
         </div>
-        <div id="options" class="hidden">
-            <button id="options-swap" class="overlay-button smallable">Swap to Season 1</button>
+        <div id="options" class="hidden popup">
+            <button id="options-swap" class="overlay-button smallable"><div class="sub-button">Swap to Season 1</div></button>
             <span id="swap-text">See the Season 1 tracker.</span>
-            <button id="options-progress-mode" class="overlay-button smallable">Set Watched Videos</button>
+            <button id="options-progress-mode" class="overlay-button smallable"><div class="sub-button">Set Watched Videos</div></button>
             <span>Set which videos you've seen before using the tracker.</span>
-            <button id="options-reset" class="overlay-button smallable">Reset This Season</button>
+            <button id="options-reset" class="overlay-button smallable"><div class="sub-button">Reset This Season</div></button>
             <span>Wipe your watch progress for this season.</span>
         </div>
-        <div id="intro">
+        <div id="intro" class="popup">
             <table>
                 <!--<tr>
                     <span id="intro-explainer">Hello! Are you new to the series?</span>
@@ -65,10 +65,10 @@
                     <span id="intro-explainer">Hey, thanks for checking out the website!<br>It's easy to use, but it needs a little explanation.</span>
                 </tr>
                 <tr>
-                    <button id="intro-yes" class="smallable">I swear I'll read it</button>
+                    <button id="intro-yes" class="smallable"><div class="sub-button">I swear I'll read it</div></button>
                 </tr>
                 <tr>
-                    <button id="intro-okay" class="hidden smallable">Alright, I'll pick whoever</button>
+                    <button id="intro-okay" class="hidden smallable"><div class="sub-button">Alright, I'll pick whoever</div></button>
                 </tr>
             </table>
         </div>
