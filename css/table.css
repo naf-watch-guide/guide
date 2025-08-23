@@ -2,8 +2,14 @@ table {
     border-spacing: 32px 0;
 }
 
-#video-table img {
+.thumbnail {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
     cursor: pointer;
+    background-size: cover;
+    background-position-y: center;
 }
  
 #names td {

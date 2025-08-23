@@ -11,6 +11,8 @@ linkparams = {
 
 seenintro = false
 
+settingprogress = false
+
 function main() {
     load()
 

@@ -40,7 +40,6 @@ function overlayInit() {
 
     $("#intro-no").on("click", () => {
         closeOverlay()
-        localStorage.setItem("seenintro", true);
     })
 
     $("#intro-okay").on("click", () => {
@@ -50,6 +49,12 @@ function overlayInit() {
 
     $("#overlay-confirm-no").on("click", () => {
         closeOverlay()
+    })
+    
+    $("#overlay").on("click", (e) => {
+        if ($(e.target).is(".closeable")) {
+            closeOverlay(false)
+        }
     })
 }
 
@@ -62,6 +67,7 @@ function closeOverlay(sound = true) {
 }
 
 function hideAll() {
+    $("#overlay").removeClass("closeable")
     $("#intro").addClass("hidden")
     $("#video-popup").addClass("hidden")
     $("#options").addClass("hidden")
@@ -87,6 +93,7 @@ function showIntro() {
 function showVideoConfirmation(linkobj, chapter) {
     hideAll()
     $("#overlay").addClass("overlay-visible")
+    $("#overlay").addClass("closeable")
     $("#video-confirm").removeClass("hidden")
 
     $("#video-link").attr("href", VIDEO_PREFIX + linkobj.links[chapter - 1])

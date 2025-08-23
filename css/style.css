@@ -14,13 +14,6 @@ body {
     background-image: url(../assets/img/dart.png);
 }
 
-.thumbnail {
-    width: 160px;
-    height: 90px;
-    object-fit: cover;
-    object-position: center;
-}
-
 #sidebar {
     display: flex;
     flex-direction: column;

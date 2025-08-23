@@ -35,7 +35,6 @@ function regenVideos() {
                 const videoID = linkobj.links[chapter - 1]
 
                 //const locked = idx > linkobj.progress + 1
-                locked = false
                 const invisible = chapter > linkobj.progress + 1
                 const ending = linkobj.ending == chapter - 1
                 const skip = videoID === "skip"
@@ -47,20 +46,25 @@ function regenVideos() {
                 } else if (ending && !invisible) {
                     fullLink = "The End..."
                 } else if (!invisible) {
-                    if (locked) {
-                        fullLink = `<img class="thumbnail" src="assets/locked.jpg"}>`
-                    } else if (videoID !== undefined) {
+                    if (videoID !== undefined) {
                         const img = IMG_PREFIX + videoID + IMG_SUFFIX
-                        fullLink = `<img class="thumbnail" src=${img}>`
+                        const overlay = settingprogress && linkobj.progress + 1 !== chapter ? "assets/img/you_watched_it_alright.png" : "assets/img/nothing.png"
+                        fullLink = `<img style="background-image:url(${img})" class="thumbnail" src="${overlay}">`
                     } else {
                         fullLink = "The End...?"
                     } 
                 }
 
-                $(`#chapter-${chapter}`).append(`<td id="video-${linkobj.username}-${chapter}" class="video${locked ? "" : " locked"}">${fullLink}</td>`)
+                $(`#chapter-${chapter}`).append(`<td id="video-${linkobj.username}-${chapter}" class="video"}">${fullLink}</td>`)
                 if (!invisible && videoID !== undefined && !skip) {
                     $(`#video-${linkobj.username}-${chapter}`).on("click", (event) => {
-                        showVideoConfirmation(linkobj, chapter)
+                        if (!settingprogress) {
+                            showVideoConfirmation(linkobj, chapter)
+                        } else {
+                            linkobj.progress = linkobj.progress >= chapter ? chapter - 1 : chapter
+                            if (linkobj.links[linkobj.progress] === "skip") { linkobj.progress++; }
+                            regenVideos()
+                        }
                     })
                 }
 
