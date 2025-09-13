@@ -33,6 +33,6 @@ links_s2 = [
     { username: "SB737", links: ["FhTp7501lgQ", "tnKtNUH5ULg"], progress: 0, ending: 2 },
     { username: "Squiddo", links: ["4kI7jMrNyIo", "zWta9XIUMXs"], progress: 0, ending: 2 },
     { username: "Taneesha­hogan", links: ["y3u4L-GHC1I", "HR8yEmy-E8o", "iSI9t0VJVE0", "mZIN-j18LCc"], progress: 0, ending: 4 },
-    { username: "Wunba", links: ["FEfV--HOqGY", "smieZ1tvmis", "xJyEq2F4-Sw", "inVlZdbxKEI", "VD7pej3t2YU", "88-NClbWVDc", "e2oH-fZEGoc"], progress: 0 },
+    { username: "Wunba", links: ["FEfV--HOqGY", "smieZ1tvmis", "xJyEq2F4-Sw", "inVlZdbxKEI", "VD7pej3t2YU", "88-NClbWVDc", "e2oH-fZEGoc", "o5tyhVgziAQ"], progress: 0 },
     { username: "YeahJaron", links: ["0xC5cfaVz9U", "1n3wMfVaBh8", "N-fZ6pj_Jdg", "TFkDzU9qClI", "66BY1H9QaV0", "a5UNJOxDs_M", "pzl5Yf9zL4o"], progress: 0, ending: 7 }
 ]
