@@ -5,8 +5,14 @@ function optionsInit() {
         showOptions()
     })
 
-    $("#options-swap").on("click", () => {
-        swap()
+    $("#options-swap-1").on("click", () => {
+        swap(1)
+        closeOverlay()
+        click()
+    })
+
+    $("#options-swap-2").on("click", () => {
+        swap(2)
         closeOverlay()
         click()
     })
