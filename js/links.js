@@ -16,10 +16,10 @@ links_s1 = [
 
 links_s2 = [
     { username: "4CVIT", links: ["FgHOiVT7buc", "-IZ025_0Upg", "zu5lWDsJfQk"], progress: 0 },
-    { username: "Ashswag", links: [], progress: 0 },
+    { username: "Ashswag", links: ["mRdTs5nL9KM", "skip", "skip", "skip", "eHgQdJ6WbRc", "skip", "skip", "skip"], progress: 0 },
     { username: "Blooh", links: ["B2immVPiiU4", "Min46lVkpRg", "znJ3sItiTj0", "skip", "WaTCxS4Pye0"], progress: 0, ending: 5 },
     { username: "BranzyCraft", links: ["t6GViL5gRoU"], progress: 0, ending: 1 },
-    { username: "ClownPierce", links: [], progress: 0 },
+    { username: "ClownPierce", links: ["z2q_hYQzA1A","qfN8PaV2AXE","HOiMr85rgyQ","xtSyLMtYxt0","KMuafovzEBE", "r6q9XWyVnUY", "AThpCwYcsnI", "OiQ1Ga4bzmQ"], progress: 0 },
     { username: "Crafty­Masterman", links: ["fM-HIQY94Fk", "T8V2rxxG7Yc", "skip", "FwhVK2defKI"], progress: 0, ending: 4 },
     { username: "Evbo", links: ["0IyLA5irWPk"], progress: 0, ending: 1 },
     { username: "Legundo", links: ["t8p8lF53XdQ", "9XYIXtj-bIE", "qtxIZQ8Vkb4", "5oxrKVymbXk", "Uoq6Y9TrRBw", "GiT6ZENoaIk"], progress: 0, ending: 6 },
