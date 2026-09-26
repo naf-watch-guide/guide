@@ -43,7 +43,7 @@ links_s3 = [
     { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI"], progress: 0 },
     { username: "Legundo", links: ["dH7R3B7FITg", "rrCegqf6mrY"], progress: 0 },
     { username: "Loony", links: ["MieMNjT9sAY"], progress: 0 },
-    { username: "Mogswamp", links: ["8h3ykC5epVc"], progress: 0 }
+    { username: "Mogswamp", links: ["8h3ykC5epVc"], progress: 0 },
     { username: "rekrap", links: ["ywehA3HqxZ8", "BW2FRBEOCoE"], progress: 0 },
     { username: "Reddoons", links: ["RIha_zjNgmQ"], progress: 0 },
     { username: "SB737", links: ["OcuQuEWPqCs"], progress: 0 },
