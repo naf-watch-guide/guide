@@ -38,8 +38,10 @@ links_s2 = [
 ]
 
 links_s3 = [
-    { username: "BranzyCraft", links: ["nVEXyf1bMxQ"], progress: 0 },
-    { username: "Legundo", links: ["dH7R3B7FITg"], progress: 0 },
-    { username: "rekrap", links: ["ywehA3HqxZ8"], progress: 0 },
-    { username: "Taneesha­hogan", links: ["XB4LbuPT4XA"], progress: 0 },
+    { username: "BranzyCraft", links: ["nVEXyf1bMxQ", "LJfYKIk5CNU"], progress: 0 },
+    { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI"], progress: 0 },
+    { username: "Legundo", links: ["dH7R3B7FITg", "rrCegqf6mrY"], progress: 0 },
+    { username: "rekrap", links: ["ywehA3HqxZ8", "BW2FRBEOCoE"], progress: 0 },
+    { username: "Taneesha­hogan", links: ["XB4LbuPT4XA", "rqUQdVEjcAQ"], progress: 0 },
+    { username: "SolidarityGaming", links: ["dTgSFZRT4m8"], progress: 0 }
 ]
