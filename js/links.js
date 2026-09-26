@@ -15,7 +15,7 @@ links_s1 = [
 ]
 
 links_s2 = [
-    { username: "4CVIT", links: ["FgHOiVT7buc", "-IZ025_0Upg", "zu5lWDsJfQk"], progress: 0 },
+    { username: "4CVIT", links: ["FgHOiVT7buc", "-IZ025_0Upg", "zu5lWDsJfQk", "VOJyEyrbBOQ", "skip", "P0t7vgu6pA0"], progress: 0 },
     { username: "Ashswag", links: ["mRdTs5nL9KM", "skip", "skip", "skip", "eHgQdJ6WbRc", "skip", "skip", "skip"], progress: 0 },
     { username: "Blooh", links: ["B2immVPiiU4", "Min46lVkpRg", "znJ3sItiTj0", "skip", "WaTCxS4Pye0"], progress: 0, ending: 5 },
     { username: "BranzyCraft", links: ["t6GViL5gRoU"], progress: 0, ending: 1 },
