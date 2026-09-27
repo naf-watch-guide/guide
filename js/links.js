@@ -40,6 +40,7 @@ links_s2 = [
 links_s3 = [
     { username: "BranzyCraft", links: ["nVEXyf1bMxQ", "LJfYKIk5CNU"], progress: 0 },
     { username: "ClownPierce", links: ["avHSuj4uN94"], progress: 0 },
+    { username: "Crafty­Masterman", links: ["sMXf_tvMW7M"], progress: 0 },
     { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI"], progress: 0 },
     { username: "Legundo", links: ["dH7R3B7FITg", "rrCegqf6mrY"], progress: 0 },
     { username: "Loony", links: ["MieMNjT9sAY"], progress: 0 },
