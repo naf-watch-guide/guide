@@ -16,6 +16,8 @@ function regenNames() {
         if (linkobj.links.length !== 0) {
             if (linkparams.season === 1 && linkobj.username === "Wunba") {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story<br><i>(COMPILATION)</td>`)
+            } else if (linkparams.season === 2 && linkobj.username === "Ashswag") {
+                $("#names").append(`<td class="user">${linkobj.username}'s Story<br><i>(2 PART COMPILATION)</td>`)
             } else {
                 $("#names").append(`<td class="user">${linkobj.username}'s Story</td>`)
             }
