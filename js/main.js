@@ -1,9 +1,9 @@
 iamwatching = ""
 
-previous_position = { username: "4CVIT", chapter: 0 }
+previous_position = { username: "BranzyCraft", chapter: 0 }
 
 linkparams = {
-    season: 2,
+    season: 3,
     get links() {
         return linkparams.season === 1 ? links_s1 : (linkparams.season === 2 ? links_s2 : links_s3)
     }
