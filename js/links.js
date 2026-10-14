@@ -40,7 +40,7 @@ links_s2 = [
 links_s3 = [
     { username: "Blooh", links: ["bYtnBtw6RRQ"], progress: 0 },
     { username: "BranzyCraft", links: ["nVEXyf1bMxQ", "LJfYKIk5CNU", "qdZeVTNCHiQ", "kHjxoQtYid8"], progress: 0 },
-    { username: "ClownPierce", links: ["avHSuj4uN94", "LI5LFlE9coU", "OCkZQomvW0U", "y6q05mKS5Ms"], progress: 0 },
+    { username: "ClownPierce", links: ["avHSuj4uN94", "LI5LFlE9coU", "OCkZQomvW0U", "y6q05mKS5Ms"], progress: 0, ending: 4 },
     { username: "Crafty­Masterman", links: ["sMXf_tvMW7M"], progress: 0 },
     { username: "Farzy", links: ["Pvx_4JW_WqM"], progress: 0, ending: 1 },
     { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI", "7Z-QRF9u3NI", "f_0TFJytLUI"], progress: 0 },
