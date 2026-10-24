@@ -39,11 +39,11 @@ links_s2 = [
 
 links_s3 = [
     { username: "Blooh", links: ["bYtnBtw6RRQ"], progress: 0, ending: 1 },
-    { username: "BranzyCraft", links: ["nVEXyf1bMxQ", "LJfYKIk5CNU", "qdZeVTNCHiQ", "kHjxoQtYid8", "BOsOjycEIvQ"], progress: 0 },
+    { username: "BranzyCraft", links: ["nVEXyf1bMxQ", "LJfYKIk5CNU", "qdZeVTNCHiQ", "kHjxoQtYid8", "BOsOjycEIvQ", "-RYF6GiakT0"], progress: 0 },
     { username: "ClownPierce", links: ["avHSuj4uN94", "LI5LFlE9coU", "OCkZQomvW0U", "y6q05mKS5Ms"], progress: 0, ending: 4 },
     { username: "Crafty­Masterman", links: ["sMXf_tvMW7M", "skip", "Csly8X1ubqo"], progress: 0 },
     { username: "Farzy", links: ["Pvx_4JW_WqM"], progress: 0, ending: 1 },
-    { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI", "7Z-QRF9u3NI", "f_0TFJytLUI", "5p4qPIoidW4"], progress: 0 },
+    { username: "jojosolos", links: ["xhWEx7Bl1PU", "BYmpThQ8GDI", "7Z-QRF9u3NI", "f_0TFJytLUI", "5p4qPIoidW4", "bmrDvAV_IzQ"], progress: 0 },
     { username: "Kiply", links: ["HqKfkcWpRuQ"], progress: 0 },
     { username: "Legundo", links: ["dH7R3B7FITg", "rrCegqf6mrY", "FE_g5yfySIk", "jrTEn7LsD7E", "idr6m-egh00"], progress: 0 },
     { username: "Loony", links: ["MieMNjT9sAY", "1jMBfuYUoJk", "qbPOWZItDyQ"], progress: 0 },
@@ -56,5 +56,5 @@ links_s3 = [
     { username: "SolidarityGaming", links: ["dTgSFZRT4m8", "NtaZpFVwebo", "yPmX4jqiLms", "LJG9opeI_E4"], progress: 0 },
     { username: "spideyarmy", links: ["v2l0DYV2LFs"], progress: 0 },
     { username: "Taneesha­hogan", links: ["XB4LbuPT4XA", "rqUQdVEjcAQ"], progress: 0, ending: 2 },
-    { username: "Wunba", links: ["JvPidZhb1mQ", "skip", "gC3MFWS2CW8", "OTD95FxVzdA", "okNta-4OgWY"], progress: 0 },
+    { username: "Wunba", links: ["JvPidZhb1mQ", "skip", "gC3MFWS2CW8", "OTD95FxVzdA", "okNta-4OgWY", "CuOt3RgCW00"], progress: 0 },
 ]
